@@ -1,3 +1,7 @@
+import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Story;
+import io.qameta.allure.TmsLink;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -7,7 +11,10 @@ public class AnnotatedStepsTest {
   private WebSteps steps = new WebSteps();
 
   @Test
-  @DisplayName("Шаги с аннотацией @Step")
+  @Owner("anovikova")
+  @DisplayName("Шаги с аннотацией @Step. Displaying names of issues")
+  @Feature("Issue tab")
+  @Story("List of issues")
   public void issueSearchByName() {
     steps.openMainPage();
     steps.searchForRepository(REPOSITORY);

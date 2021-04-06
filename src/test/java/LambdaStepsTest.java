@@ -4,6 +4,10 @@ import static com.codeborne.selenide.Selenide.$$;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
+import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Story;
+import io.qameta.allure.TmsLink;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -15,7 +19,10 @@ public class LambdaStepsTest {
   private final static String ISSUE_NAME = "Listeners NamedBy";
 
   @Test
-  @DisplayName("Лямбда шаги через step")
+  @Owner("anovikova")
+  @DisplayName("Лямбда шаги через step. Displaying names of issues")
+  @Feature("Issue tab")
+  @Story("List of issues")
   public void issueSearchByName() {
 
     step("Открываем главную страницу", (step) -> {

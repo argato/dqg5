@@ -4,6 +4,10 @@ import static com.codeborne.selenide.Selenide.$$;
 import static com.codeborne.selenide.Selenide.open;
 
 import com.codeborne.selenide.logevents.SelenideLogger;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Story;
+import io.qameta.allure.TmsLink;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -16,7 +20,10 @@ public class SelenideTest {
   private final static String ISSUE_NAME = "Listeners NamedBy";
 
   @Test
-  @DisplayName("Чистый Selenide")
+  @Owner("anovikova")
+  @DisplayName("Чистый Selenide. Displaying names of issues")
+  @Feature("Issue tab")
+  @Story("List of issues")
   public void issueSearchByName() {
 
     SelenideLogger.addListener("allure", new AllureSelenide());
