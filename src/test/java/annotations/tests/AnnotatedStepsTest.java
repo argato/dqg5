@@ -1,9 +1,11 @@
+package annotations.tests;
+
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
-import io.qameta.allure.TmsLink;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import annotations.steps.WebSteps;
 
 public class AnnotatedStepsTest {
   private final static String REPOSITORY = "eroshenkoam/allure-example";
